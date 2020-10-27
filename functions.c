@@ -1,20 +1,18 @@
 #include "holberton.h"
 /**
- * print_int - function that returns an int to signed decimal
- * @xd: arguments passed
- * Return: length of integers
+ * print_int - print integers
+ * @lista: arguments passed
+ * Return: number of characters printed
  */
-int print_int(va_list xd)
+int print_int(va_list lista)
 {
-	int i, div, len;
+	int i, div = 1, largo = 0;
 	unsigned int num;
 
-	i = va_arg(xd, int);
-	div = 1;
-	len = 0;
+	i = va_arg(lista, int);
 	if (i < 0)
 	{
-		len += _putchar('-');
+		largo = largo + _putchar('-');
 		num = i * -1;
 	}
 	else
@@ -29,24 +27,24 @@ int print_int(va_list xd)
 
 	while (div != 0)
 	{
-		len += _putchar('0' + (num / div));
+		largo = largo + _putchar('0' + (num / div));
 		num %= div;
 		div /= 10;
 	}
 
-	return (len);
+	return (largo);
 }
 /**
- * print_string - specificer s
- * @xd: valist
- * Return: total characters
+ * print_string - print string received
+ * @lista: arguments
+ * Return: numbers of characters printed
  */
-int print_string(va_list xd)
+int print_string(va_list lista)
 {
 	int i;
 	char *s;
 
-	s = va_arg(xd, char*);
+	s = va_arg(lista, char*);
 
 	if (s == NULL)
 	{
@@ -62,51 +60,48 @@ int print_string(va_list xd)
 }
 
 /**
- * print_char - specificer c
- * @xd: valist
- * Return: asd
+ * print_char - print simple char
+ * @lista: arguments
+ * Return: numbers of characters printed
  */
-int print_char(va_list xd)
+int print_char(va_list lista)
 {
-	_putchar(va_arg(xd, int));
+	_putchar(va_arg(lista, int));
 	return (1);
 }
 /**
- * print_porcentaje - Prints a percent symbol
- * @xd: list of arguments
- * Return: Will return the amount of characters printed.
+ * print_porcentaje - print percent symbol
+ * @lista: arguments
+ * Return: numbers of characters printed
  */
-int print_porcentaje(va_list xd)
+int print_porcentaje(va_list lista)
 {
-	if (xd != NULL)
+	if (lista != NULL)
 	{
-
 	}
 	_putchar('%');
 	return (1);
 }
 /**
- * print_unsigned - fgsd
- * @lista: asfdas
- *Return: asdf
+ * print_unsigned - print unsigned integer
+ * @lista: arguments
+ *Return: numbers of characters printed
  */
 int print_unsigned(va_list lista)
 {
-int div, len;
+int div = 1, largo = 0;
 unsigned int num;
 
 num = va_arg(lista, int);
-div = 1;
-len = 0;
 while (num / div > 9)
 {
 div *= 10;
 }
 while (div != 0)
 {
-len += _putchar('0' + (num / div));
+largo = largo + _putchar('0' + (num / div));
 num %= div;
 div /= 10;
 }
-return (len);
+return (largo);
 }

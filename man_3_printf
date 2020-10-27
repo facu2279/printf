@@ -1,0 +1,48 @@
+.\" Manpage for printf.
+.\" Contact Facundo or Tomas to correct errors.
+.TH man 8 "27 Oct 2020" "1.0" "printf man page"
+.SH NAME
+printf - print data
+.SH SYNOPSIS
+printf("%option", ARGUMENT);
+.SH DESCRIPTION
+Print ARGUMENT(s) according to FORMAT, or excecute acoording to OPTION:
+.SH OPTIONS
+\" double quote
+%c
+
+This option is used to print a single character
+
+%s
+
+This option is used to print a character string
+
+%%
+
+This option is used to print a simple percent symbol
+
+%d
+
+This option is used to print a decimal
+
+%i
+
+This option is used to print an integer
+
+%u
+
+This option is used to print a unsigned integer
+
+%b
+
+This option is used to print a decimal in BINARY
+
+%o
+
+This option is used to print a decimal in OCTAL
+.SH SEE ALSO
+man printf (to see original printf and compare)
+.SH BUGS
+No known bugs...
+.SH AUTHOR
+Facundo Diaz and Tomas De Castro - Holberton School

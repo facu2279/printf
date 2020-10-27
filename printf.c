@@ -1,8 +1,8 @@
 #include "holberton.h"
 /**
- * _printf - asdasd
- * @format: asdasdas
- * Return: sadasd
+ * _printf - print data
+ * @format: string received
+ * Return: Return number of charachetrs printed
  */
 int _printf(const char *format, ...)
 {
@@ -29,11 +29,11 @@ int _printf(const char *format, ...)
 	return (contador);
 }
 /**
- * _functions - asdasdsad
- * @format: asdasdsad
- * @opciones: aasdasd
- * @lista: asdasdas
- * Return: asdasd
+ * _functions - print a characters and call other functions
+ * @format: string received
+ * @opciones: structure of options
+ * @lista: arguments
+ * Return: number of characters printed
  */
 int _functions(const char *format, format_t opciones[], va_list lista)
 {
